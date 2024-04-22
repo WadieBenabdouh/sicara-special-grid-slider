@@ -1,0 +1,39 @@
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+.scroll-container{
+    width: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    display: flex;
+}
+
+.parent {
+    padding: 2em;
+    display: flex;
+}
+
+.grid-wrapper-one,
+.grid-wrapper-two {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+}
+
+.grid-page-one,
+.grid-page-two {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2em;
+}
+
+.grid-page-one img,
+.grid-page-two img {
+    max-width: 100%;
+}
